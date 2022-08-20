@@ -1,6 +1,3 @@
-from tkinter import CENTER
-
-
 print("Bienvenue dans cet espace destiné à la conversion des chiffres en lettres")
 print("Quelle valeur voulez-vous traduire?")
 
