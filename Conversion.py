@@ -53,6 +53,29 @@ Les_centaines = {
     9 : "Neuf cent"
 }
 
+Les_milliers = {
+    1 : "Mille" ,
+    2 : "Deux mille" ,
+    3 : "Trois mille" ,
+    4 : "Quatre mille" ,
+    5 : "Cinq mille" ,
+    6 : "Six mille" ,
+    7 : "Sept mille" ,
+    8 : "Huit mille" ,
+    9 : "Neuf mille"
+}
+
+Dix_milliers = {
+    1 : "Dix Mille" ,
+    2 : "Vingt mille" ,
+    3 : "Trente mille" ,
+    4 : "Quarante mille" ,
+    5 : "Cinquante mille" ,
+    6 : "Soixante mille" ,
+    7 : "Soixante dix mille" ,
+    8 : "Quatre vingt mille" ,
+    9 : "Quatre vingt dix mille"
+}
 
 longueur_du_nombre = len (nombre)
 if longueur_du_nombre == 1:
@@ -73,3 +96,15 @@ if longueur_du_nombre == 3 and int(nombre[1]) == 1:
     print(Solution.format(Les_centaines.get(int(nombre[0])) + " " + Les_unités_et_les_dizaines.get(int(nombre[2]))))
 if longueur_du_nombre == 3 and int(nombre[1]) >= 2:
     print(Solution.format(Les_centaines.get(int(nombre[0])) + " " + Les_dizaines_composées.get(int(nombre[1])) + " " + Les_unités_et_les_dizaines.get(int(nombre[2]))))
+
+if longueur_du_nombre == 4 and int(nombre[1]) == 0 and int(nombre[2]) == 0 and int(nombre[3]) == 0:
+    print(Solution.format(Les_milliers.get(int(nombre[0]))))
+if longueur_du_nombre == 4 and int(nombre[1]) == 0 and int(nombre[2]) == 0:
+    print(Solution.format(Les_milliers.get(int(nombre[0])) + " " + Les_unités_et_les_dizaines.get(int(nombre[3]))))
+if longueur_du_nombre == 4 and int(nombre[1]) == 0 and int(nombre[2]) == 1:
+    print(Solution.format(Les_milliers.get(int(nombre[0])) + " " + Les_unités_et_les_dizaines.get(int(nombre[3]))))
+if longueur_du_nombre == 4 and int(nombre[1]) == 0 and int(nombre[2]) >= 2:
+    print(Solution.format(Les_milliers.get(int(nombre[0])) + " " + Les_dizaines_composées.get(int(nombre[2])) + " " + Les_unités_et_les_dizaines.get(int(nombre[3]))))
+if longueur_du_nombre == 4:
+    print(Solution.format(Les_milliers.get(int(nombre[0])) + " " + Les_centaines.get(int(nombre[1])) + " " + Les_dizaines_composées.get(int(nombre[2])) + " " + Les_unités_et_les_dizaines.get(int(nombre[3]))))
+    
